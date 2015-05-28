@@ -1,6 +1,6 @@
 part of controllers;
 
-class ExampleController {
+class InBusinessController {
   greet(Greeter greeter, {String name}) {
     return greeter.greet(name);
   }

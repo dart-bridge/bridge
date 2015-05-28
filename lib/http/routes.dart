@@ -3,7 +3,7 @@ part of framework;
 class Routes {
   register(
       // Controllers --
-      ExampleController controller,
+      InBusinessController controller,
       // --
       Router router) => router
   // Routes
