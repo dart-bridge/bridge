@@ -7,7 +7,8 @@
   * `cd my-blog`
 3. Remove the Git repo inside:
   * `rm -rf .git`
-4. Open the project up in your favourite editor.
+4. Edit **.gitignore** to not exclude **pubspec.yaml**.
+5. Open the project up in your favourite editor.
 
 ### What's inside?
 You don't have to care about all the files included in this repo.
