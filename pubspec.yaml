@@ -5,5 +5,4 @@ environment:
 dependencies:
   bridge:
   # Temporary while in development
-#    git: git://github.com/emilniklas/dart-bridge
-    path: /Users/emilpersson/Code/bridge
+    git: git://github.com/emilniklas/dart-bridge
