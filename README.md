@@ -1,6 +1,6 @@
 # A [Bridge](//github.com/emilniklas/dart-bridge) app
 
-## Getting started
+## Installation
 1. Clone this repository, naming your project folder:
   * `git clone git:github.com/emilniklas/bridge-app my-blog`
 2. Enter your new project:
@@ -35,3 +35,16 @@ about the _files_ directly inside this folder, only the _folders_.
         reference their methods or create closures.
         * __tether_handler.dart__ – Listen for, and send messages to, the client here.
     * __templates__ – The root for your template files.
+    
+## Getting started
+Ensure that the application is working by running `dart bridge`. Once inside the shell
+run the `start` command:
+```
+= start
+```
+This will start the server and start listening on [localhost:1337](//localhost:1337) as
+a default.
+
+Verify that it works.
+
+Start by modifying files within __lib/http/__. 
