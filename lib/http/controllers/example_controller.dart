@@ -6,7 +6,6 @@ class ExampleController {
   }
 
   index() {
-
-    return view('index', withScript: 'main');
+    return template('index', withScript: 'main');
   }
 }
