@@ -1,0 +1,9 @@
+name: app
+version: 0.1.0
+environment:
+  sdk: '>=1.0.0 <2.0.0'
+dependencies:
+  bridge:
+  # Temporary while in development
+#    git: git://github.com/emilniklas/dart-bridge
+    path: /Users/emilpersson/Code/bridge
