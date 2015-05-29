@@ -1,6 +1,6 @@
 part of framework;
 
-class TetherHandler {
+class TetherRegistration {
   register(Tether tether) {
 
     // Listen to the client

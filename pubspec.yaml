@@ -6,3 +6,6 @@ dependencies:
   bridge:
   # Temporary while in development
     git: git://github.com/emilniklas/dart-bridge
+dev_dependencies:
+  test: any
+  testcase: any

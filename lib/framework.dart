@@ -6,15 +6,15 @@ import 'package:bridge/tether.dart';
 import 'http/controllers.dart';
 
 part 'http/routes.dart';
-part 'http/tether_handler.dart';
+part 'http/tethers.dart';
 
-class HttpServiceProvider implements ServiceProvider {
+class BridgeApplicationServiceProvider implements ServiceProvider {
 
   load(Routes routes,
        Application app,
        TetherManager manager,
-       TetherHandler handler) {
+       TetherRegistration registration) {
     app.resolve(routes.register);
-    manager.registerHandler(handler.register);
+    manager.registerHandler(registration.register);
   }
 }
