@@ -1,3 +1,4 @@
+# [bridge.core]
 
 service_providers:
   # Register all your service providers here.

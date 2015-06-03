@@ -1,7 +1,7 @@
 <head>
     <title>Bridge</title>
     <script src="//use.typekit.net/dcz8uda.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script></head>
+    <script>try{Typekit.load();}catch(e){}</script>
     <style>
         body, html, .wrap-all {
             height:100%;
@@ -40,10 +40,13 @@
         }
     </style>
 </head>
+
 <body>
 <div class="wrap-all">
     <div class="wrap-row">
         <div class="wrap-cell">
+            // Here is where we inject the greeting
+            <p>$greeting</p>
             <h1>Are we in business?</h1>
             <iframe src="https://ghbtns.com/github-btn.html?user=dart-bridge&repo=framework&type=watch&count=true&v=2" frameborder="0" scrolling="0" height="20px"></iframe>
             <iframe src="https://ghbtns.com/github-btn.html?user=dart-bridge&repo=framework&type=star&count=true" frameborder="0" scrolling="0" height="20px"></iframe>

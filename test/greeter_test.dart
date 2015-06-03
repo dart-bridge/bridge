@@ -3,7 +3,6 @@ export 'package:testcase/init.dart';
 import 'package:app/app.dart';
 
 class GreeterTest implements TestCase {
-
   Greeter greeter;
 
   setUp() {
