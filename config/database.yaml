@@ -1,0 +1,9 @@
+# [bridge.database]
+
+# Available options: mongodb
+driver: mongodb
+
+# Options for MongoDB driver
+mongodb:
+  port: 27017
+  database: app
