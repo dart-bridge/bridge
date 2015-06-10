@@ -13,3 +13,4 @@ packages
 pubspec.lock
 
 cupid_error.log
+.cupid_history
