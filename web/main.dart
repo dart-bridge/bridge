@@ -4,5 +4,5 @@ main() async {
   // Connect the tether
   await globalTether();
 
-  print(await tether.send('data'));
+  print(await tether.send('greet', 'Server'));
 }

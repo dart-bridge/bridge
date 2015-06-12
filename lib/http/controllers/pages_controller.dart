@@ -11,10 +11,16 @@ class PagesController {
         });
   }
 
-  apiEndpoint() {
+  greet(Greeter greeter, {String name}) {
+    return {
+      'response': greeter.greet(name)
+    };
+  }
+
+  resource() {
     return [
-      'Some',
-      'data',
+      'some',
+      'resource'
     ];
   }
 }
