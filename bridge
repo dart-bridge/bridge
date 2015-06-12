@@ -1,4 +1,6 @@
 #!/usr/local/bin/dart
 
+export 'lib/app.dart';
+export 'lib/services.dart';
+
 export 'package:bridge/cli_init.dart';
-export 'package:app/app.dart';

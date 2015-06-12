@@ -1,6 +1,3 @@
-export 'package:bridge/http.dart';
-export 'package:bridge/view.dart';
-export 'package:bridge/tether.dart';
+library app;
 
-export 'framework.dart';
-export 'app/lib.dart';
+part 'app/greeter.dart';

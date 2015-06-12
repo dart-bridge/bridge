@@ -1,7 +1,7 @@
-library app;
+part of app;
 
 class Greeter {
-  String greet(String name) {
+  greet(String name) {
     return 'Hello, $name!';
   }
 }

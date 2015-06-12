@@ -7,4 +7,4 @@ service_providers:
   - bridge.http.HttpServiceProvider
   - bridge.view.ViewServiceProvider
   - bridge.tether.TetherServiceProvider
-  - framework.BridgeApplicationServiceProvider
+  - app_services.ApiServiceProvider
