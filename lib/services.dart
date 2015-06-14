@@ -5,6 +5,7 @@ import 'http/api.dart';
 import 'package:bridge/core.dart';
 
 export 'package:bridge/http.dart';
+export 'package:bridge/database.dart';
 export 'package:bridge/view.dart';
 import 'package:bridge/tether.dart';
 
