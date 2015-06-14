@@ -10,12 +10,8 @@ class Api {
 
   routes(Router router) {
     router.get('/', controller.index);
-    router.get('greet/:name', controller.greet);
-    router.get('resource', controller.resource);
   }
 
   tether(Tether tether, Container c) {
-    tether.listen('greet', (name) => c.resolve(controller.greet, namedParameters: {'name': name}));
-    tether.listen('resource', c.presolve(controller.resource));
   }
 }

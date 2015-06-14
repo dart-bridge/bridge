@@ -1,11 +1,9 @@
 name: app
-version: 0.2.0
+version: 1.0.0-alpha1+1
 environment:
   sdk: '>=1.0.0 <2.0.0'
 dependencies:
-  bridge:
-  # Temporary while in development
-    git: git://github.com/dart-bridge/framework
+  bridge: '1.0.0-alpha1+1'
 dev_dependencies:
   test: any
   testcase: any
