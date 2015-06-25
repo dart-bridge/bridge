@@ -1,9 +1,9 @@
 name: app
-version: 1.0.0-alpha1+2
+version: 1.0.0-alpha1+3
 environment:
   sdk: '>=1.0.0 <2.0.0'
 dependencies:
-  bridge: '1.0.0-alpha1+2'
+  bridge: '1.0.0-alpha1+3'
 dev_dependencies:
   test: any
   testcase: any
