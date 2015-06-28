@@ -3,3 +3,4 @@
 # Templates options
 templates:
   root: lib/templates
+  cache: .templates.dart

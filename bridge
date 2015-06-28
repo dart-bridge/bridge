@@ -3,4 +3,6 @@
 export 'lib/app.dart';
 export 'lib/services.dart';
 
+export '.templates.dart';
+
 export 'package:bridge/cli_init.dart';
