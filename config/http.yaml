@@ -4,3 +4,4 @@
 server:
   host: localhost
   port: 1337
+  publicRoot: web
