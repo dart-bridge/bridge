@@ -5,7 +5,7 @@ library app_services;
 /// of Bridge specific constructs.
 
 /// Application entry
-import 'app.dart';
+import 'package:app/app.dart';
 import 'api/api.dart';
 
 /// Core library
