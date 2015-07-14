@@ -1,28 +1,11 @@
-<!doctype html>
-<html lang='en'>
-<head>
-  <title>Bridge</title>
-  <script src="//use.typekit.net/dcz8uda.js"></script>
-  <script>try {
-    Typekit.load();
-  } catch (e) {
-  }</script>
-  <style>@include ('example-styles')</style>
-</head>
+@extends ('app')
 
-<body>
-  <div class="wrap-all">
-    <div class="wrap-row">
-      <div class="wrap-cell">
-        <div>
-          <img src="http://dart-bridge.github.io/images/logo-blue.svg" alt="Bridge">
-        </div>
-        <iframe src="https://ghbtns.com/github-btn.html?user=dart-bridge&repo=framework&type=star&count=true"
-                frameborder="0" scrolling="0" height="20px"></iframe>
-        <iframe src="https://ghbtns.com/github-btn.html?user=dart-bridge&repo=framework&type=watch&count=true&v=2"
-                frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-      </div>
-    </div>
+@block ('content')
+  <div>
+    <img src="http://dart-bridge.github.io/images/logo-blue.svg" alt="Bridge">
   </div>
-</body>
-</html>
+  <iframe src="https://ghbtns.com/github-btn.html?user=dart-bridge&repo=framework&type=star&count=true"
+          frameborder="0" scrolling="0" height="20px"></iframe>
+  <iframe src="https://ghbtns.com/github-btn.html?user=dart-bridge&repo=framework&type=watch&count=true&v=2"
+          frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+@end block

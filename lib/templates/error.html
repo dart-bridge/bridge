@@ -1,0 +1,16 @@
+@extends ('app')
+
+@block ('content')
+  <h3>
+    ${message == null ? 'Oops! Something went wrong!' : message}
+    @if (code != 200 && code != null)
+      <small>($code)</small>
+    @end if
+  </h3>
+
+  // Include the stack trace only if we're in a development environment
+  @if (Environment.isDevelopment && stackTrace != null)
+    <h6>$exception</h6>
+    <pre class='stack-trace'>${$escape(new Chain.forTrace(stackTrace).terse.toString())}</pre>
+  @end if
+@end block

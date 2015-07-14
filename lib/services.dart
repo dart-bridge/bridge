@@ -8,20 +8,26 @@ library app_services;
 import 'package:app/app.dart';
 import 'api/api.dart';
 
-/// Core library
+/// Core libraries
+import 'dart:async';
+import 'dart:io';
 import 'package:bridge/core.dart';
 
 /// Components
 ///
 /// Exported libraries can be accessed for service providers
 /// but not used locally. Importing allows for both.
-export 'package:bridge/http.dart';
+import 'package:bridge/http.dart';
 export 'package:bridge/database.dart';
-export 'package:bridge/view.dart';
+import 'package:bridge/view.dart';
 import 'package:bridge/tether.dart';
+
+/// External libraries
+import 'package:shelf/shelf.dart' as shelf;
 
 /// Custom Service Providers
 ///
 /// Remember that the service providers are explicitly registered
 /// in **config/app.yaml**
 part 'service_providers/api_service_provider.dart';
+part 'service_providers/http_exceptions_service_provider.dart';

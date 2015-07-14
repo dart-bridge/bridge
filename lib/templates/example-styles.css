@@ -31,3 +31,12 @@ iframe {
     padding-top: 0.2em;
     vertical-align: bottom;
 }
+.stack-trace {
+    font-size: 0.5em;
+    white-space: pre-wrap;
+    text-align: left;
+    max-width: 70em;
+    margin: auto;
+    background: #fbfbfb;
+    padding:1em;
+}

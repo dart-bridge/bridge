@@ -1,6 +1,6 @@
 part of app_services;
 
-/// This is a service provider. It will be used when the program is
+/// This is a service provider. It will be instantiated when the program is
 /// started using `dart bridge`. Read more about the [ServiceProvider]
 /// to learn how to implement your own.
 class ApiServiceProvider implements ServiceProvider {

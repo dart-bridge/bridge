@@ -9,3 +9,4 @@ service_providers:
   - bridge.tether.TetherServiceProvider
   - bridge.database.DatabaseServiceProvider
   - app_services.ApiServiceProvider
+  - app_services.HttpExceptionsServiceProvider
