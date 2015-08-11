@@ -3,6 +3,9 @@ version: 0.1.0
 environment:
   sdk: '>=1.0.0 <2.0.0'
 dependencies:
-  bridge: '1.0.0-alpha3+3'
+  bridge: 
+    git:
+      url: https://github.com/dart-bridge/framework
+      ref: develop
 dev_dependencies:
   test: any
