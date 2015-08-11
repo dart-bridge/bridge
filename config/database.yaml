@@ -1,7 +1,7 @@
 # [bridge.database]
 
-# Available options: mongodb
-driver: mongodb
+# Available options: in_memory, mongodb
+driver: in_memory
 
 # Options for MongoDB driver
 mongodb:
