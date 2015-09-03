@@ -2,6 +2,7 @@
 .pub/
 build/
 packages
+.packages
 .env
 
 # dart2js
