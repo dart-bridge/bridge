@@ -5,7 +5,7 @@ export 'lib/app.dart';
 export 'lib/services.dart';
 
 // Export templates
-export '.templates.dart';
+export 'storage/.templates.dart';
 
 // Start the command line interface
 export 'package:bridge/cli_init.dart';

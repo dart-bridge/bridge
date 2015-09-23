@@ -7,6 +7,10 @@ driver: in_memory
 # value above to select which driver to use.
 drivers:
 
+  # SQLite Driver Configuration
+  sqlite:
+    file: storage/.database.db
+
   # MySQL Driver Configuration
   my_sql:
     host: localhost
