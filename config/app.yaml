@@ -8,5 +8,5 @@ service_providers:
   - bridge.view.ViewServiceProvider
   - bridge.tether.TetherServiceProvider
   - bridge.database.DatabaseServiceProvider
-  - app_services.ApiServiceProvider
-  - app_services.HttpExceptionsServiceProvider
+  - services.ApiServiceProvider
+  - services.HttpExceptionsServiceProvider

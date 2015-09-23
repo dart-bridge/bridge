@@ -6,7 +6,7 @@ import 'package:bridge/view.dart';
 /// in the methods.
 ///
 /// You'll probably want to import your main application above
-/// (uncomment the second line).
+/// (uncomment the second line of this file).
 class PagesController {
   index() {
     return template('index');

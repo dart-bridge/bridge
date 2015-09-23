@@ -3,6 +3,7 @@
 // Export application
 export 'lib/app.dart';
 export 'lib/services.dart';
+export 'lib/migrations.dart';
 
 // Export templates
 export 'storage/.templates.dart';

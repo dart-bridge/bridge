@@ -1,4 +1,4 @@
-part of app_services;
+part of services;
 
 /// This service provider is dedicated to creating pretty feedback to the client
 /// when exceptions are thrown in the HTTP layer.

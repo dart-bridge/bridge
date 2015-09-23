@@ -1,6 +1,6 @@
 # [bridge.database]
 
-# Available drivers: in_memory, my_sql, postgres
+# Available drivers: in_memory, my_sql, postgres, sqlite
 driver: in_memory
 
 # Driver specific configuration – change the [driver]
@@ -30,3 +30,7 @@ drivers:
     password: env(APP_DB_PASSWORD)
     database: env(APP_DB_DATABASE)
     ssl: env(APP_DB_SECURE)
+
+# Database migrations
+migrations:
+  - migrations.CreateUsersTable
