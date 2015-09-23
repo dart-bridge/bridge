@@ -4,7 +4,7 @@ import 'dart:async';
 import 'package:bridge/database.dart';
 
 class CreateUsersTable extends Migration {
-  Future rollback(Gateway gateway) async {
+  Future run(Gateway gateway) async {
     await gateway.create('users', (schema) {
       schema.id();
       schema.string('email').unique().nullable(false);
@@ -15,7 +15,7 @@ class CreateUsersTable extends Migration {
     });
   }
 
-  Future run(Gateway gateway) async {
+  Future rollback(Gateway gateway) async {
     await gateway.drop('users');
   }
 }
