@@ -1,4 +1,4 @@
-library app_services;
+library services;
 /// This is the main bootstrapper library for the Bridge app.
 /// It's where the necessary Bridge components are imported
 /// alongside the application implementations

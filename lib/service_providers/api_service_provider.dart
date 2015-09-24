@@ -1,4 +1,4 @@
-part of app_services;
+part of services;
 
 /// This is a service provider. It will be instantiated when the program is
 /// started using `dart bridge`. Read more about the [ServiceProvider]
