@@ -9,3 +9,4 @@ dependencies:
       ref: develop
 dev_dependencies:
   test: any
+  grinder: any
