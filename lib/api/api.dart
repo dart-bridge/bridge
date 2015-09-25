@@ -14,7 +14,7 @@ class Api {
   Api(PagesController this.controller);
 
   routes(Router router) {
-    router.get('/', controller.index, name: 'index');
+    router.get('/', controller.index).named('index');
   }
 
   tether(Tether tether) {
