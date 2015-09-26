@@ -18,7 +18,8 @@ import 'package:bridge/core.dart';
 /// Exported libraries can be accessed for service providers
 /// but not used locally. Importing allows for both.
 import 'package:bridge/http.dart';
-export 'package:bridge/database.dart';
+import 'package:bridge/cli.dart';
+import 'package:bridge/database.dart';
 import 'package:bridge/view.dart';
 import 'package:bridge/tether.dart';
 
@@ -31,3 +32,4 @@ import 'package:shelf/shelf.dart' as shelf;
 /// in **config/app.yaml**
 part 'service_providers/api_service_provider.dart';
 part 'service_providers/http_exceptions_service_provider.dart';
+part 'service_providers/commands_service_provider.dart';

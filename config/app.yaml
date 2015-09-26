@@ -10,3 +10,4 @@ service_providers:
   - bridge.database.DatabaseServiceProvider
   - services.ApiServiceProvider
   - services.HttpExceptionsServiceProvider
+  - services.CommandsServiceProvider
