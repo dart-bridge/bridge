@@ -3,7 +3,7 @@ library app.shared;
 /// of the application should import this library. This is the home
 /// for all entities being shared by the two sides of the [Tether] connection.
 
-import 'package:bridge/src/tether/library_shared.dart';
-import 'package:bridge/src/view/shared/library.dart';
+import 'package:bridge/tether_shared.dart';
+import 'package:bridge/view_shared.dart';
 
 part 'shared_structures.dart';

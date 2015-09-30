@@ -8,13 +8,13 @@ main(args) => grind(args);
 test() => new TestRunner().testAsync();
 
 @Task()
-build() => bridgeCommand('build');
+build() => bridgeCommand(['build']);
 
 @Task()
-migrate() => bridgeCommand('db_migrate');
+migrate() => bridgeCommand(['db_migrate']);
 
 @DefaultTask()
 @Depends(test)
-init() => bridgeCommand('build, db_migrate');
+init() => bridgeCommand(['build', 'db_migrate']);
 
 
