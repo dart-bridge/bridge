@@ -5,3 +5,4 @@ library app.shared;
 import 'package:bridge/bridge_shared.dart';
 
 part 'shared_structures.dart';
+part 'user.dart';

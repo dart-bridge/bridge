@@ -14,4 +14,8 @@ main() async {
 
   // Register shared data structures
   registerTransport();
+
+  // Example where we use the Tether to get all users from the server
+  List<User> users = await tether.send('users');
+  print(users);
 }

@@ -5,6 +5,6 @@ part of main;
 /// in the methods.
 class PagesController {
   index() {
-    return template('index');
+    return template('index').withScript('main');
   }
 }

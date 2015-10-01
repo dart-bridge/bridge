@@ -1,4 +1,4 @@
-part of app;
+part of app.shared;
 
 class User extends Model {
   @Field('first_name') String firstName;
