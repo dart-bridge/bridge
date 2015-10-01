@@ -4,9 +4,9 @@ part of services;
 /// started using `dart bridge`. Read more about the [ServiceProvider]
 /// to learn how to implement your own.
 class ApiServiceProvider implements ServiceProvider {
-  load(Container container, Api api, TetherManager tethers) async {
+  load(Container container, Main main, TetherManager tethers) async {
     // Register routes
-    await container.resolve(api.routes);
+    await container.resolve(main.routes);
 
     // Register tether handler
     tethers.registerHandler((Tether tether) {
@@ -14,7 +14,7 @@ class ApiServiceProvider implements ServiceProvider {
       registerSharedStructures(tether);
 
       // Resolve the tether method on the [Api] class
-      container.resolve(api.tether, injecting: {Tether: tether});
+      container.resolve(main.tether, injecting: {Tether: tether});
     });
   }
 }

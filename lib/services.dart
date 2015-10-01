@@ -5,23 +5,13 @@ library services;
 /// of Bridge specific constructs.
 
 /// Application entry
-import 'package:app/app.dart';
-import 'api/api.dart';
+import 'app.dart';
+import 'main/main.dart';
 
 /// Core libraries
 import 'dart:async';
 import 'dart:io';
-import 'package:bridge/core.dart';
-
-/// Components
-///
-/// Exported libraries can be accessed for service providers
-/// but not used locally. Importing allows for both.
-import 'package:bridge/http.dart';
-import 'package:bridge/cli.dart';
-import 'package:bridge/database.dart';
-import 'package:bridge/view.dart';
-import 'package:bridge/tether.dart';
+import 'package:bridge/bridge.dart';
 
 /// External libraries
 import 'package:shelf/shelf.dart' as shelf;

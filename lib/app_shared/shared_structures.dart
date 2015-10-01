@@ -8,8 +8,9 @@ part of app.shared;
 /// The type is used to identify what a data structure should be sent as.
 /// The factory is used to rebuild the data structure on the other side.
 ///
-/// Note that the data structure must implement [bridge.tether.shared.Serializable], or
+/// Note that the data structure must implement [bridge.transport.shared.Serializable], or
 /// else it will be cast to a string.
 void registerSharedStructures(Tether tether) {
-  tether.registerStructure('Template', Template, (serialized) => new Template.deserialize(serialized));
+  tether.registerStructure('Template', Template,
+      (serialized) => new Template.deserialize(serialized));
 }
