@@ -13,5 +13,5 @@ main() async {
   await globalTether();
 
   // Register shared data structures
-  registerSharedStructures(tether);
+  registerTransport();
 }

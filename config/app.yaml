@@ -6,6 +6,6 @@ service_providers:
   - bridge.view.ViewServiceProvider
   - bridge.tether.TetherServiceProvider
   - bridge.database.DatabaseServiceProvider
-  - services.ApiServiceProvider
+  - services.MainServiceProvider
   - services.HttpExceptionsServiceProvider
   - services.CommandsServiceProvider
