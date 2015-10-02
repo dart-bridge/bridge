@@ -9,11 +9,11 @@ import 'package:app/client.dart';
 /// A good practice would be to delegate the client script into your client
 /// application in **lib/client** as neatly as possible.
 main() async {
-  // Connect the tether
-  await globalTether();
-
   // Register shared data structures
   registerTransport();
+  
+  // Connect the tether
+  await globalTether();
 
   // Example where we use the Tether to get all users from the server
   List<User> users = await tether.send('users');
