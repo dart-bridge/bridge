@@ -26,6 +26,6 @@ class Main {
   }
 
   tether(Tether tether) {
-    resolveTetherListener(tether, 'users', usersController.index);
+    tether.listen('users', usersController.index);
   }
 }
