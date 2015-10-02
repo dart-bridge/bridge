@@ -8,10 +8,11 @@ class MainServiceProvider implements ServiceProvider {
     // Register routes
     await container.resolve(main.routes);
 
+    // Register shared data structures
+    registerTransport();
+
     // Register tether handler
     tethers.registerHandler((Tether tether) {
-      // Register shared data structures
-      registerTransport();
 
       // Resolve the tether method on the [Main] class
       container.resolve(main.tether, injecting: {Tether: tether});
