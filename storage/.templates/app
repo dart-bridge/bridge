@@ -1,0 +1,18 @@
+yield '''<!DOCTYPE html>''';
+yield '''<html lang="en">''';
+yield '''<head>''';
+yield '''  <title>Bridge</title>''';
+yield '''  <script src="//use.typekit.net/dcz8uda.js"></script>''';
+yield '''  <script>try {Typekit.load();} catch (e) {}</script>''';
+yield '''  <style>''';yield* $generate('example-styles');yield '''</style>''';
+yield '''</head>''';
+yield '''<body>''';
+yield '''  <div class="wrap-all">''';
+yield '''    <div class="wrap-row">''';
+yield '''      <div class="wrap-cell">''';
+yield* $block('content');
+yield '''      </div>''';
+yield '''    </div>''';
+yield '''  </div>''';
+yield '''</body>''';
+yield '''</html>''';

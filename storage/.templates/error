@@ -1,0 +1,17 @@
+yield* $extends('app', {
+
+'content': () async* {
+yield '''  <h3>''';
+yield '''    ${$esc(message == null ? 'Oops! Something went wrong!' : message)}''';
+yield* $if([[code != 200 && code != null, () async* {
+yield '''      <small>(${$esc(code)})</small>''';
+}]]);
+yield '''  </h3>''';
+
+
+yield* $if([[Environment.isDevelopment && stackTrace != null, () async* {
+yield '''    <h6>${$esc(exception)}</h6>''';
+yield '''    <pre class='stack-trace'>${$esc($escape($new(#Chain.forTrace)(stackTrace).terse.toString()))}</pre>''';
+}]]);
+},
+});

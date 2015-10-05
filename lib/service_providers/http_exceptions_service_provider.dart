@@ -34,7 +34,7 @@ class HttpExceptionsServiceProvider implements ServiceProvider {
   shelf.Response errorTemplate(Template template) {
     return new shelf.Response(
         template.data.containsKey('code') ? template.data['code'] : 500,
-        body: template.parsed,
+        body: template.encoded,
         headers: {
           'Content-Type': ContentType.HTML.toString()
         });
