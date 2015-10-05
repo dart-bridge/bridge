@@ -1,6 +1,6 @@
 @extends ('app')
 
-@block ('content')
+@start block ('content')
   <h3>
     ${message == null ? 'Oops! Something went wrong!' : message}
     @if (code != 200 && code != null)
