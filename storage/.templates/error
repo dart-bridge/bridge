@@ -11,7 +11,8 @@ yield '''  </h3>''';
 
 yield* $if([[Environment.isDevelopment && stackTrace != null, () async* {
 yield '''    <h6>${$esc(exception)}</h6>''';
-yield '''    <pre class='stack-trace'>${$esc($escape($new(#Chain.forTrace)(stackTrace).terse.toString()))}</pre>''';
+yield '''    <pre class='stack-trace'>${$esc($new(#Chain.forTrace)(stackTrace).terse)}</pre>''';
 }]]);
 },
+
 });
