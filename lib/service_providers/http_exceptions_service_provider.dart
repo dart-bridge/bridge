@@ -2,7 +2,7 @@ part of services;
 
 /// This service provider is dedicated to creating pretty feedback to the client
 /// when exceptions are thrown in the HTTP layer.
-class HttpExceptionsServiceProvider implements ServiceProvider {
+class HttpExceptionsServiceProvider extends ServiceProvider {
   load(Server server) async {
     // This is the global exception handler. It must be registered first.
     server.handleException(Exception, globalHandler);
