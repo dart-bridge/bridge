@@ -2,6 +2,7 @@
 .pub/
 build/
 packages
+storage
 .packages
 .env
 
