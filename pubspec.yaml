@@ -10,3 +10,8 @@ dependencies:
 dev_dependencies:
   test: any
   grinder: any
+
+# Temporary (https://github.com/dart-lang/pub/issues/1341)
+transformers:
+- $dart2js:
+    $exclude: web/**.dart
