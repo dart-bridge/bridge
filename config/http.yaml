@@ -4,4 +4,5 @@
 server:
   host: localhost
   port: 1337
-  publicRoot: web
+  public_root: web
+  build_root: storage/.build

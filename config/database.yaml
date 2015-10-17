@@ -1,9 +1,36 @@
 # [bridge.database]
 
-# Available options: in_memory, mongodb
+# Available drivers: in_memory, my_sql, postgres, sqlite
 driver: in_memory
 
-# Options for MongoDB driver
-mongodb:
-  port: 27017
-  database: app
+# Driver specific configuration – change the [driver]
+# value above to select which driver to use.
+drivers:
+
+  # SQLite Driver Configuration
+  sqlite:
+    file: storage/.database.db
+
+  # MySQL Driver Configuration
+  my_sql:
+    host: localhost
+    port: 3306
+    username: env(APP_DB_USER)
+    password: env(APP_DB_PASSWORD)
+    database: env(APP_DB_DATABASE)
+    ssl: env(APP_DB_SECURE)
+    max: 5
+    max_packet_size: 16777216 # 16 MB
+
+  # PostgreSQL Driver Configuration
+  postgres:
+    host: localhost
+    port: 5432
+    username: env(APP_DB_USER)
+    password: env(APP_DB_PASSWORD)
+    database: env(APP_DB_DATABASE)
+    ssl: env(APP_DB_SECURE)
+
+# Database migrations
+migrations:
+  - migrations.CreateUsersTable

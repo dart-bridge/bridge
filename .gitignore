@@ -1,17 +1,7 @@
-.buildlog
 .pub/
-build/
-packages
 .packages
 .env
-
-# dart2js
-*.dart.js
-*.js_
-*.js.deps
-*.js.map
-
-pubspec.lock
-
-cupid.log
 .cupid_history
+storage
+packages
+pubspec.lock

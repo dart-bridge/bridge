@@ -3,9 +3,10 @@
 // Export application
 export 'lib/app.dart';
 export 'lib/services.dart';
+export 'lib/migrations.dart';
 
 // Export templates
-export '.templates.dart';
+export 'storage/.templates.dart';
 
 // Start the command line interface
 export 'package:bridge/cli_init.dart';

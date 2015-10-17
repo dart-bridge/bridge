@@ -1,11 +1,11 @@
-part of app_services;
+part of services;
 
 /// This service provider is dedicated to creating pretty feedback to the client
 /// when exceptions are thrown in the HTTP layer.
-class HttpExceptionsServiceProvider implements ServiceProvider {
+class HttpExceptionsServiceProvider extends ServiceProvider {
   load(Server server) async {
     // This is the global exception handler. It must be registered first.
-    server.handleException(Exception, globalHandler);
+    server.handleException(Object, globalHandler);
 
     // Subsequent handlers should go from unspecific to specific exceptions.
     // In other words: base classes first, sub classes last.
@@ -21,7 +21,7 @@ class HttpExceptionsServiceProvider implements ServiceProvider {
     }));
   }
 
-  Future<shelf.Response> globalHandler(Exception exception, StackTrace stack) async {
+  Future<shelf.Response> globalHandler(Object exception, StackTrace stack) async {
     return errorTemplate(await template('error', withData: {
       'exception': exception,
       'stackTrace': stack,
@@ -34,7 +34,7 @@ class HttpExceptionsServiceProvider implements ServiceProvider {
   shelf.Response errorTemplate(Template template) {
     return new shelf.Response(
         template.data.containsKey('code') ? template.data['code'] : 500,
-        body: template.parsed,
+        body: template.encoded,
         headers: {
           'Content-Type': ContentType.HTML.toString()
         });

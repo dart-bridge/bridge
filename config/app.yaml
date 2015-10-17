@@ -2,11 +2,10 @@
 
 service_providers:
   # Register all your service providers here.
-  # Remember to either import or export the
-  # library that contains the class.
   - bridge.http.HttpServiceProvider
   - bridge.view.ViewServiceProvider
   - bridge.tether.TetherServiceProvider
   - bridge.database.DatabaseServiceProvider
-  - app_services.ApiServiceProvider
-  - app_services.HttpExceptionsServiceProvider
+  - services.MainServiceProvider
+  - services.HttpExceptionsServiceProvider
+  - services.CommandsServiceProvider
