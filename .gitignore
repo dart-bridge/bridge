@@ -3,5 +3,6 @@
 .env
 .cupid_history
 storage
+!storage/.templates.dart
 packages
 pubspec.lock
