@@ -23,3 +23,4 @@ import 'package:shelf/shelf.dart' as shelf;
 part 'service_providers/main_service_provider.dart';
 part 'service_providers/http_exceptions_service_provider.dart';
 part 'service_providers/commands_service_provider.dart';
+part 'service_providers/welcome_service_provider.dart';

@@ -5,7 +5,14 @@ service_providers:
   - bridge.http.HttpServiceProvider
   - bridge.view.ViewServiceProvider
   - bridge.tether.TetherServiceProvider
+  - bridge.events.EventsServiceProvider
   - bridge.database.DatabaseServiceProvider
   - services.MainServiceProvider
   - services.HttpExceptionsServiceProvider
   - services.CommandsServiceProvider
+
+  # This Service Provider displays the message that appears when you
+  # run `dart bridge`. You can modify the message in
+  # `lib/service_providers/welcome_service_provider.dart`, or remove
+  # the message by simply removing this line
+  - services.WelcomeServiceProvider
