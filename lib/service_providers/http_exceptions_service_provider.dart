@@ -2,6 +2,10 @@ part of services;
 
 /// This service provider is dedicated to creating pretty feedback to the client
 /// when exceptions are thrown in the HTTP layer.
+///
+/// If this is not using the template function to return templates from
+/// [bridge.view], the [DependsOn] annotation can be removed.
+@DependsOn(ViewServiceProvider)
 class HttpExceptionsServiceProvider extends ServiceProvider {
   load(Server server) async {
     // This is the global exception handler. It must be registered first.

@@ -5,7 +5,7 @@ class UsersController {
 
   UsersController(Repository<User> this.users);
 
-  Future<List<User>> index() {
-    return users.all().toList();
+  Stream<User> index() {
+    return users.all();
   }
 }

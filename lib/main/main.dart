@@ -17,8 +17,7 @@ class Main {
   PagesController controller;
   UsersController usersController;
 
-  Main(PagesController this.controller,
-      UsersController this.usersController);
+  Main(this.controller, this.usersController);
 
   routes(Router router) {
     router.get('/', controller.index).named('index');
