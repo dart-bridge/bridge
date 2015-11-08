@@ -2,7 +2,7 @@
 .packages
 .env
 .cupid_history
-storage
+storage/*
 !storage/.templates.dart
 packages
 pubspec.lock
