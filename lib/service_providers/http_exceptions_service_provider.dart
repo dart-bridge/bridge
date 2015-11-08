@@ -16,29 +16,36 @@ class HttpExceptionsServiceProvider extends ServiceProvider {
     server.handleException(HttpNotFoundException, notFoundHandler);
   }
 
-  Future<shelf.Response> notFoundHandler(Exception exception, StackTrace stack) async {
-    return errorTemplate(await template('error', withData: {
-      'exception': exception,
-      'stackTrace': stack,
-      'message': 'Oops! That page wasn\'t found!',
-      'code': 404,
-    }));
+  Future<shelf.Response> globalHandler(
+      Object exception,
+      StackTrace stack) {
+    return errorTemplate(500, exception, stack);
   }
 
-  Future<shelf.Response> globalHandler(Object exception, StackTrace stack) async {
-    return errorTemplate(await template('error', withData: {
-      'exception': exception,
-      'stackTrace': stack,
-      'code': 500,
-    }));
+  Future<shelf.Response> notFoundHandler(
+      HttpNotFoundException exception,
+      StackTrace stack) {
+    return errorTemplate(404, exception, stack, {
+      'message': "Oops! That page wasn't found!"
+    });
   }
 
-  /// Turns a [Template] containing a 'code' integer field in the
-  /// data map, into a [shelf.Response]
-  shelf.Response errorTemplate(Template template) {
+  Future<shelf.Response> errorTemplate(
+      int code,
+      Object exception,
+      StackTrace stack,
+      [Map<String, dynamic> variables = const {}]) async {
+
+    // Create a template with the specified parameters
+    final errorTemplate = await (template('error', withData: variables)
+      ..exception = exception
+      ..stackTrace = stack
+      ..code = code ?? 500);
+
+    // Return a shelf Response from the template and the params
     return new shelf.Response(
-        template.data.containsKey('code') ? template.data['code'] : 500,
-        body: template.encoded,
+        code ?? 500,
+        body: errorTemplate.encoded,
         headers: {
           'Content-Type': ContentType.HTML.toString()
         });

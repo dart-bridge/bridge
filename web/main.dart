@@ -6,7 +6,7 @@ import 'package:app/client.dart';
 ///
 ///     return template('templateName').withScript('main');
 ///
-/// A good practice would be to delegate the client script into your client
+/// A good practice would be to delegate this script into your client
 /// application in **lib/client** as neatly as possible.
 main() async {
   // Register shared data structures

@@ -16,28 +16,28 @@ class CommandsServiceProvider extends ServiceProvider {
   }
 
   @Command('Register a new user')
-  new_user({String first_name, String last_name, String email}) async {
-    // Ensure we have a first_name
-    if (first_name == null)
-      first_name = await cli.ask(const Question('First name', type: String));
+  new_user() async {
+    // Get a first name
+    final firstName = await cli.ask(const Question('First name', type: String));
 
-    // Ensure we have a last_name
-    if (last_name == null)
-      last_name = await cli.ask(const Question('Last name', type: String));
+    // Get a last name
+    final lastName = null; //await cli.ask(const Question('Last name', type: String));
 
-    // Ensure we have an email address
-    if (email == null)
-      email = await cli.ask(const Question('Email address', type: String,
-          match: r'[\w.-]+@[\w.-]+\.[a-z]+',
-          message: 'That\'s not a valid email address!'));
+    // Get an email address
+    final email = await cli.ask(const Question('Email address', type: String,
+        match: r'[\w.-]+@[\w.-]+\.[a-z]+',
+        message: 'That\'s not a valid email address!'));
 
+    // Create user object
     final user = new User()
-      ..firstName = first_name
-      ..lastName = last_name
+      ..firstName = firstName
+      ..lastName = lastName
       ..email = email;
 
+    // Save user to database
     await users.save(user);
 
-    cli.printAccomplishment('$first_name $last_name successfully registered!');
+    // Print some feedback
+    cli.printAccomplishment('$firstName $lastName successfully registered!');
   }
 }
