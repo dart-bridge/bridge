@@ -14,8 +14,4 @@ main() async {
   
   // Connect the tether
   await globalTether();
-
-  // Example where we use the Tether to get all users from the server
-  List<User> users = await tether.send('users');
-  print(users);
 }
