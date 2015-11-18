@@ -1,4 +1,4 @@
-#!/usr/local/bin/dart
+#!/usr/bin/env dart
 
 // Export application
 export 'lib/app.dart';
