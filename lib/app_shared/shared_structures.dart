@@ -4,7 +4,6 @@ part of app.shared;
 void registerTransport() {
   registerViewTransport(); // bridge.view
   registerExceptionsTransport(); // bridge.exceptions
-  registerTetherTransport(); // bridge.tether
   registerValidationTransport(); // bridge.validation
 
   // This is a serializer registration, where we teach Bridge how to break

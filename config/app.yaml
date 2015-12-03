@@ -8,5 +8,4 @@ service_providers:
   - bridge.events.EventsServiceProvider
   - bridge.database.DatabaseServiceProvider
   - services.MainServiceProvider
-  - services.HttpExceptionsServiceProvider
   - services.CommandsServiceProvider

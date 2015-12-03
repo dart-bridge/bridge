@@ -6,9 +6,12 @@ part of services;
 @DependsOn(HttpServiceProvider)
 @DependsOn(TetherServiceProvider)
 class MainServiceProvider extends ServiceProvider {
-  load(Container container, Main main, TetherManager tethers) async {
+  load(Container container, Main main, Tethers tethers) async {
     // Register routes
     await container.resolve(main.routes);
+
+    // Bind pipeline
+    container.singleton(main, as: Pipeline);
 
     // Register shared data structures
     registerTransport();

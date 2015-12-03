@@ -11,7 +11,12 @@ import 'package:app/client.dart';
 main() async {
   // Register shared data structures
   registerTransport();
-  
-  // Connect the tether
-  await globalTether();
+
+  tether.onConnectionEstablished.listen((_) {
+    print('Online mode!');
+  });
+
+  tether.onConnectionLost.listen((_) {
+    print('Offline mode!');
+  });
 }
