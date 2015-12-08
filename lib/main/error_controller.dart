@@ -3,6 +3,9 @@ part of main;
 /// This controller is completely arbitrary. You can choose to set up
 /// your environment however you like!
 class ErrorController {
+  // lib/templates/error.chalk.html
+  static const errorTemplate = 'error';
+
   Future<Response> general(
       Object exception,
       StackTrace stack) {
@@ -25,7 +28,7 @@ class ErrorController {
       Map<String, dynamic> variables = const {}]) async {
 
     // Create a template with the specified parameters
-    final errorTemplate = await (template('error', withData: variables)
+    final errorTemplate = await (template(errorTemplate, withData: variables)
       ..exception = exception
       ..stackTrace = stack
       ..code = code);
