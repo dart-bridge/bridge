@@ -6,7 +6,7 @@ dependencies:
   bridge:
     git:
       url: https://github.com/dart-bridge/framework
-      ref: develop 
+      ref: develop
 dev_dependencies:
   test: any
   grinder: any
