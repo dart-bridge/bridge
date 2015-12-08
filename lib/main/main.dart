@@ -9,6 +9,7 @@ import '../app.dart';
 
 /// Controllers
 part 'pages_controller.dart';
+part 'error_controller.dart';
 
 /// This is the entry point to the transport layer of the application.
 /// It's where tether calls and HTTP routes are delegated to controllers.
@@ -18,9 +19,11 @@ class Main extends Pipeline {
   /// You can use dependency injection to inject whatever you want, including
   /// your own classes from the [app] library.
   SkyIsTheLimit skyIsTheLimit;
-  PagesController controller;
 
-  Main(this.controller, this.skyIsTheLimit);
+  PagesController controller;
+  ErrorController errorController;
+
+  Main(this.controller, this.errorController, this.skyIsTheLimit);
 
   /// This is the list of global Middleware to be used on all routes.
   /// It can contain nested lists of Types, objects and functions
@@ -36,12 +39,12 @@ class Main extends Pipeline {
   /// used when a route handler or middleware throws an error or exception
   /// of a specific type.
   @override get errorHandlers => {
-    HttpNotFoundException: _catch404,
+    HttpNotFoundException: errorController.notFound,
 
     // This entry catches all errors since everything is a subtype of
     // Object. This must come last in the Map, because it will override
     // all that comes after it.
-    Object: _catchAll,
+    Object: errorController.general,
   };
 
   routes(Router router) {
@@ -49,41 +52,5 @@ class Main extends Pipeline {
   }
 
   tether(Tether tether) {
-  }
-
-  Future<Response> _catchAll(
-      Object exception,
-      StackTrace stack) {
-    print('<red>Uncaught error!\n$exception</red>');
-    return _errorTemplate(exception, stack);
-  }
-
-  Future<Response> _catch404(
-      HttpNotFoundException exception,
-      StackTrace stack) {
-    return _errorTemplate(exception, stack, 404, {
-      'message': "Oops! That page wasn't found!"
-    });
-  }
-
-  Future<Response> _errorTemplate(
-      Object exception,
-      StackTrace stack,
-      [int code = 500,
-      Map<String, dynamic> variables = const {}]) async {
-
-    // Create a template with the specified parameters
-    final errorTemplate = await (template('error', withData: variables)
-      ..exception = exception
-      ..stackTrace = stack
-      ..code = code);
-
-    // Return a shelf Response from the template and the params
-    return new Response(
-        code,
-        body: errorTemplate.encoded,
-        headers: {
-          'Content-Type': ContentType.HTML.toString()
-        });
   }
 }
